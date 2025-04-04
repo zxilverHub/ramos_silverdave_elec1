@@ -32,7 +32,7 @@
                 <p>{{$message}}</p>
                 @enderror
             </div>
-            <input type="submit" value="Edit">
+            <input type="submit" value="Update">
             <a href="/home">Cancel</a>
         </form>
 

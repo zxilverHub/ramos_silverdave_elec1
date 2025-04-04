@@ -12,13 +12,15 @@
 
 <body>
     <div class="nav">
-
         <form action="homesearch" method="post">
             @csrf
             <input type="text" id="search" name="search" placeholder="Search" value="{{ old('search') }}">
             <input type="submit" value="Search">
         </form>
-        <a href="/loginpage" class="logout">Log out</a>
+        <div class="operations">
+            <a href="/editpage/{{ $user->id }}" class="edit-nav">Edit Profile</a>
+            <a href="/loginpage" class="logout">Log out</a>
+        </div>
     </div>
     <div class="main">
         <table>
@@ -31,6 +33,7 @@
             </tr>
 
             @foreach($users as $u)
+            @if($user->id != $u->id)
             <tr>
                 <td>{{ $u->id }}</td>
                 <td>{{ $u->username }}</td>
@@ -42,6 +45,7 @@
                 <td><button><a href="/editpage/{{ $u->id }}">Edit</a></button></td>
                 @endif
             </tr>
+            @endif
             @endforeach
         </table>
 

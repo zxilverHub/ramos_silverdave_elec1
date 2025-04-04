@@ -84,3 +84,8 @@ a {
     text-align: center;
     color: black !important;
 }
+
+select option {
+    padding: 1rem;
+    height: 50px;
+}

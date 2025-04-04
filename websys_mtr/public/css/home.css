@@ -148,7 +148,7 @@ table button, a {
 
     background-color: var(--c);
 
-    .logout {    
+    .logout, .edit-nav {    
         width: 100px;
         height: auto;
         text-align: center;
